@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',50);
             $table->unsignedBigInteger('city_id');
-            $table->decimal('height');
+            $table->decimal('height',5,2);
             $table->integer('stories')->nullable();
             $table->integer('finished')->nullable();
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
